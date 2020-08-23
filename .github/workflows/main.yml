@@ -29,7 +29,7 @@ jobs:
       uses: Nuget/setup-nuget@v1.0.2
       
     - name: Restore Nuget packages
-      uses: nuget restore BankAccount.sln  
+      run: nuget restore BankAccount.sln  
       
     # compile app in release mode 
     - name: Build App
