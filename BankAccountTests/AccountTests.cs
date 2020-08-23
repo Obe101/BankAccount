@@ -117,12 +117,15 @@ namespace BankAccount.Tests
             //An account created with the default constructor has a zero balance
             double withDrawAmount = 1000;
 
-            Assert.ThrowsException<ArgumentException>(() => acc.Withdraw(1));
+            Assert.ThrowsException<ArgumentException>(() => myAccount.Withdraw(withDrawAmount));
         }
         [TestMethod]
         public void WittDraw_NegativeAmout_ThrowArgumentException()
         {
+            Account myAccount = new Account();
+            double withDrawAmount = -1;
 
+            Assert.ThrowsException<ArgumentException>(() => myAccount.Withdraw(withDrawAmount));
         }
     }
 }

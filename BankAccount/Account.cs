@@ -36,6 +36,10 @@ namespace BankAccount
         public double Balance { get; private set; }
         public void Withdraw(double amt)
         {
+            if(amt < 0)
+            {
+                throw new ArgumentException("You can't withdraw a negative amount");
+            }
             if (amt > Balance)
             {
                 throw new ArgumentException("You can't withdraw more then current balance");
