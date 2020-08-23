@@ -33,7 +33,7 @@ jobs:
       
     # compile app in release mode 
     - name: Build App
-      run: msBuild BankAccount.sln /p:ConfigurationRelease
+      run: msBuild BankAccount.sln /p:Configuration=Release
       
     - name: Upload Artifact
       uses: actions/upload-artifact@v2
