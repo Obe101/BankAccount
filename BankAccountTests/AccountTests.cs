@@ -120,7 +120,7 @@ namespace BankAccount.Tests
             Assert.ThrowsException<ArgumentException>(() => myAccount.Withdraw(withDrawAmount));
         }
         [TestMethod]
-        public void WittDraw_NegativeAmout_ThrowArgumentException()
+        public void WithDraw_NegativeAmout_ThrowArgumentException()
         {
             Account myAccount = new Account();
             double withDrawAmount = -1;
