@@ -39,7 +39,7 @@ jobs:
       uses: Malcolmnixon/Setup-VSTest@v2
       
     - name: Run VSTest
-      run: vstest.console BankAccountTest\bin\debug\BankAccountTest.dll
+      run: vstest.console BankAccountTest\bin\release\BankAccountTest.dll
       
     - name: Upload Artifact
       uses: actions/upload-artifact@v2
